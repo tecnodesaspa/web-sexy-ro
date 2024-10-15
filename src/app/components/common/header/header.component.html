@@ -1,0 +1,31 @@
+<header>
+    <div class="carousel">
+         <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let h of headers">
+                <div class="picsum-img-wrapper">
+                    <img [src]="h">
+                    <div class="text-custon">
+                        <h1 class="title">{{'Bienvenid@ a Sexy RO'}}</h1>
+                        <h2 class="subtitle">Server de RO High Rates</h2>
+                    </div>
+                </div>
+            </ng-template>
+         </ngb-carousel>
+    </div>
+
+    <div class="container-cards">
+        <div class="card card-body">
+            <img src="assets/imgs/bloody_branch.png" >
+        </div>
+        <div class="card card-body">
+            <img src="assets/imgs/ssjgood.png" >
+        </div>
+        <div class="card card-body">
+            <img src="assets/imgs/rwcgold.png" >
+        </div>
+        <div class="card card-body">
+            <img src="assets/imgs/lif.png">
+        </div>
+    </div>
+
+</header>

@@ -1,0 +1,58 @@
+<div class="container">
+
+    <div class="col-md-5 mx-auto">
+            <div class="card card-body p-5">
+            <form [formGroup]="registerForm" (ngSubmit)="register(registerForm.value)">
+                <h2>Registro de usuario</h2>
+                <div class="form-group mt-2">
+                    <label for="">Usuario</label>
+                    <input type="text" class="form-control" formControlName="user" [ngClass]="{'is-invalid': submitted && f['user'].errors}">
+                    <div *ngIf="submitted && f['user'].errors" class="invalid-feedback">
+                        <div *ngIf="f['user'].errors && f['user'].errors['required']">Usuario es requerido</div>
+                        <div *ngIf="f['user'].errors && f['user'].errors['minlength']">Usuario debe tener mínimo 6 caracteres</div>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" formControlName="email" [ngClass]="{'is-invalid': submitted && f['email'].errors}">
+                    <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                        <div *ngIf="f['email'].errors && f['email'].errors['required']">Email es requerido</div>
+                        <div *ngIf="f['email'].errors && f['email'].errors['email']">Email debe ser un email válido</div>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Contraseña</label>
+                    <input type="password" class="form-control" formControlName="password" [ngClass]="{'is-invalid': submitted && f['password'].errors}">
+                    <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                        <div *ngIf="f['password'].errors && f['password'].errors['required']">Contraseña es requerida</div>
+                        <div *ngIf="f['password'].errors && f['password'].errors['minlength']">Contraseña debe tener mínimo 8 caracteres</div>
+                        <div *ngIf="f['password'].errors && f['password'].errors['mustMatch']">Contraseña y confirmar contraseña deben coincidir</div>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Repetir Contraseña</label>
+                    <input type="password" class="form-control" formControlName="confirmPassword" [ngClass]="{'is-invalid': submitted && f['confirmPassword'].errors}">
+                    <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+                        <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['required']">Confirmar contraseña es requerida</div>
+                        <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['minlength']">Confirmar contraseña debe tener mínimo 8 caracteres</div>
+                        <div *ngIf="f['confirmPassword'].errors && f['confirmPassword'].errors['mustMatch']">Contraseña y confirmar contraseña deben coincidir</div>
+                    </div>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="">Sexo</label>
+                    <select class="form-control" formControlName="genre" [ngClass]="{'is-invalid': submitted && f['genre'].errors}">
+                        <option *ngFor="let g of genres" [value]="g.value">{{g.text}}</option>
+                    </select>
+                    <div *ngIf="submitted && f['genre'].errors" class="invalid-feedback">
+                        <div *ngIf="f['genre'].errors && f['genre'].errors['required']">Sexo es requerido</div>
+                    </div>
+                </div>
+                <div class="d-grid gap-2 mt-4">
+                    <button class="btn btn-success-custom" [disabled]="btnLoad">
+                        Registrar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

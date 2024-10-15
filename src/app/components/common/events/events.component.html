@@ -1,0 +1,28 @@
+<section class="p-5">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+            <h1 class="title">Proximos eventos</h1>
+        </div>
+        <div class="col-md-3">
+            <div class="pt-5 text-center">
+                <h2 class="subtitle">Hora Server</h2>
+                <h2 class="subtitle">{{serverHour}}</h2>
+                <img src="assets/imgs/alarm.gif" >
+            </div>
+        </div>
+        <div class="col-md-9 custom-col">
+            <div *ngFor="let e of events">
+                <div class="event">
+                    <div class="event-left">
+                        <label class="event-text">{{e.title}} - {{e.hour}}</label>
+                    </div>
+                    <div class="event-right" [ngbTooltip]="e.description">
+                        <img class="icon" src="assets/icons/alert-circle-outline.svg"  alt="">
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+</section>

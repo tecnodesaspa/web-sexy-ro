@@ -1,0 +1,21 @@
+.btn-download{
+    cursor: pointer;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 4rem;
+    border: none;
+    outline: none;
+    background-color: #2ED573;
+    color: white;
+    gap: 1rem;
+    img {
+        max-width: 3rem;
+        max-height: 3rem;
+    }
+}
+
+.btn-download:active {
+    background-color: rgba($color: #2ED573, $alpha: .7);
+}

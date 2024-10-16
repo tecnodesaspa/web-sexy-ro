@@ -2,3 +2,50 @@
 
 /* Importing Bootstrap SCSS file. */
 @import 'bootstrap/scss/bootstrap';
+
+
+body{
+    background-color: #F1F2F6 !important;
+}
+
+.bg-dark-custom {
+    background-color: #2F3542;
+}
+
+.btn-dark-custom{
+    background-color: #2F3542;
+    color: white !important;
+    outline: none;
+}
+
+.text-danger-custom {
+    color: #FF4757 !important;
+}
+
+.white {
+    color: white !important;
+}
+
+.btn-success-custom{
+    background-color: #2ED573 !important;
+    color: white !important;
+}
+
+.btn-success-custom:active {
+    opacity: .6;
+}
+
+.btn-dark-outline-custom {
+    border-radius: 5px;
+    padding: .3rem .5rem;
+    background-color: transparent !important;
+    border: 1px solid #2F3542;
+}
+
+.btn-dark-outline-custom:active {
+    background-color: rgba($color: #2F3542, $alpha: .2) !important;
+}
+
+.pointer{
+    cursor: pointer;
+}

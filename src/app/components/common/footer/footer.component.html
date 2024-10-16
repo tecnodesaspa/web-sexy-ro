@@ -1,33 +1,33 @@
 <footer>
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <h1>Vota por el servidor</h1>
                 <div class="list">
                     <label>Ragnatop</label>
                     <label>toptohispano</label>
                     <label>Top100arena</label>
                 </div>
-            </div>
-            <div class="col-md-3">
+            </div> -->
+            <!-- <div class="col-md-3">
                 <h1>Instancias</h1>
                 <div class="list">
                     <label>Endless Tower</label>
                 </div>
-            </div>
-            <div class="col-md-3">
+            </div> -->
+            <div class="col-md-6">
                 <h1>Links</h1>
                 <div class="list">
-                    <label>Inicio</label>
-                    <label>Información</label>
+                    <label (click)="logEvent('go_to_home')">Inicio</label>
+                    <!-- <label (click)="logEvent('go_to_')">Información</label> -->
                 </div>
             </div>
-            <div class="col-md-3 pe-5">
+            <div class="col-md-6">
                 <h1>Redes sociales</h1>
                 <div class="list">
-                    <label>Facebook</label>
-                    <label>Instagram</label>
-                    <label>Discord</label>
+                    <label (click)="logEvent('go_to_facebook')">Facebook</label>
+                    <label (click)="logEvent('go_to_instagram')">Instagram</label>
+                    <!-- <label>Discord</label> -->
                 </div>
             </div>
         </div>

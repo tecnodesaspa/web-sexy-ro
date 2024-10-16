@@ -1,1 +1,112 @@
-<p>coding works!</p>
+<app-navbar></app-navbar>
+
+<div class="container mt-5">
+    <div class="text-center">
+        <h1>Como crear tu propio servidor de forma sencilla</h1>
+    </div>
+    <div class="card mt-3">
+        <div class="card-body">
+            <section class="p-4">
+                <div class="text-center mb-5">
+                    <h2>Levantar emulador y base de datos</h2>
+                </div>
+                <p>
+                    SexyRo es un proyecto opensource basado en el emulador rAthena. <br>
+                    Podrás descargar los recursos necesarios para crear tu proyecto en los siguientes links:
+                </p>
+                <div class="row mt-3" style="text-align: -webkit-center;">
+                    <div class="col-md-4 mt-3">
+                        <button class="btn-download" (click)="goToUrl('download_pre_renewal', urlPreRenewal)">
+                            SexyRo Pre-Renewal
+                            <img src="assets/icons/download-outline.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <button class="btn-download" (click)="goToUrl('download_renewal', urlRenewal)">
+                            SexyRo Renewal
+                            <img src="assets/icons/download-outline.svg" alt="">
+                        </button>
+                    </div>
+                    <div class="col-md-4 mt-3">
+                        <button class="btn-download" (click)="goToUrl('download_renewal', urlPack)">
+                            Pack herramientas
+                            <img src="assets/icons/download-outline.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+                <p class="mt-5">
+                    Antes de comenzar es necesario que tengas instalado <label class="link pointer" (click)="goToUrl('go_to_docker', 'https://www.docker.com/')">Docker</label> - <label class="link pointer" (click)="goToUrl('go_to_docker_desktop', 'https://www.docker.com/products/docker-desktop/')">Docker Desktop</label> en tu computador para levantar base de datos. <br>
+                    Instalado docker entra al proyecto y ubicado aqui debes ejecutar el comando
+                </p>
+                <div class="copy">
+                    <label for="">docker compose up -d</label>
+                    <button class="btn-copy">
+                        <img src="assets/icons/content_copy.svg" alt="">
+                    </button>
+                </div>
+                <p class="mt-5">
+                    Creado y ejecutado el contenedor podrás ejecutar el servidor ya previamente configurado. <br>
+                    Ejecutar archivo llamado     <b>start.bat</b>
+                </p>
+                <div class="container-img mt-5">
+                    <img src="assets/imgs/server.jpg" alt="">
+                </div>
+                <p  class="mt-5">
+                    Se abrirán las consolas correspondientes a <b>map-server.exe</b>, <b>login-server.exe</b> y <b>char-server.exe</b>. <br>
+                    ¡Felicitaciones ya tienes tu emulador corriendo!
+                </p>
+            </section>
+            <section class="p-4">
+                <div class="text-center mb-5">
+                    <h2>Conectar cliente con emulador</h2>
+                </div>
+                <p class="mt-3">
+                    En el pack de herramientas encontrarás un cliente de prueba el cual funciona de forma local. Debes copiar los archivos dentro de la carpeta “Cliente de prueba” en la carpeta donde tengas <label class="link pointer" (click)="logEvent('download_ragnarok')">Ragnarok Online</label> Instalado
+                </p>
+                <div class="container-img mt-5">
+                    <img src="assets/imgs/ro-files.jpg" alt="">
+                </div>
+                <p class="mt-5">
+                    ¡Ejecuta el archivo <b>RagnarokRE_patched.exe</b> y comienza a jugar!
+                </p>
+            </section>
+            <section class="p-4">
+                <div class="text-center mb-5">
+                    <h2>Crea un cliente para tu servidor</h2>
+                </div>
+                <p class="mt-5">
+                    Para la creación de un cliente personalizado para tu servidor encontrarñas un archivo comprimido que termina en <b>eRagexeRE</b>, debes extraer este archivo junto con el programa <b>Nemo Master</b> que encontrarás en el pack para crear tu servidor. <br>
+                    Ejecutado este proyecto encontrarás una ventana similar en donde podrás seleccionar las caracteristicas con la que quedará tu cliente, desde el nombre de tu servidor, estilos, entre otras cosas.
+                    Aquí cargarás el cliente limpio con el botón <b>Browser</b>
+                </p>
+                <div class="container-img mt-5">
+                    <img src="assets/imgs/client.jpg" alt="">
+                </div>
+                <p class="mt-5">
+                    Dentro del pack encontrarás un archivo llamado <b>sexy-ro.log</b> el cual vienen ya pre-cargadas algunas configuraciones por defecto para el cliente y lo podrás cargar pinchando en el botón <b>Load Profile</b>.
+                    Listas las configuraciones para tu cliente debes pinchar en el botón <b>Load Client</b>.
+                </p>
+                <p>
+                    ¡Listo tu cliente, podrás utilizarlo en tu servidor!
+                </p>
+            </section>
+            <section>
+                <div class="text-center mb-5">
+                    <h2>Crea un grf para tu servidor</h2>
+                </div>
+                <p class="mt-5">
+                    Para crear tu popio grf encontrarás un programa llamado GRF Editor el cual debes instalarlo en tu computador y al ejecutarlo encontrarás una ventana como esta.
+                </p>
+                <div class="container-img mt-5">
+                    <img src="assets/imgs/grf.jpg" alt="">
+                </div>
+                <p class="mt-5">
+                    Puedes seleccionar el archivo <b>custom.grf</b> que viene en el pack y modificarlo a gusto. <br>
+                    Considera modificar el archivo <b>sclienteinfo.xml</b> en donde deberás poner la IP de tu servidor en la etiqueta <b>address</b>, además el nombre de tu servidor o las imagenes de carga
+                </p>
+            </section>
+        </div>
+    </div>
+</div>
+
+<app-footer></app-footer>

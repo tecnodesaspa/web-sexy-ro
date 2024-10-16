@@ -1,12 +1,12 @@
 <nav class="navbar navbar-expand-lg bg-dark-custom">
     <div class="container-fluid">
-        <a class="navbar-brand text-danger-custom" routerLink="">SexyRo</a>
+        <a class="navbar-brand text-danger-custom ms-5" routerLink="">SexyRo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
       <div class="collapse navbar-collapse " id="navbarText">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-            <li *ngFor="let m of menu" class="nav-item" [ngClass]="{'dropdown': m.dropdown}">
+            <li *ngFor="let m of menu" class="nav-item me-5 pointer" [ngClass]="{'dropdown': m.dropdown}">
                 <a *ngIf="!m.dropdown" class="nav-link white" (click)="goToPage(m.route)">{{m.text}}</a>
                 <div *ngIf="m.dropdown">
                     <div class="btn-group" dropdown>

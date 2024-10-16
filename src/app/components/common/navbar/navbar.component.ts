@@ -21,30 +21,30 @@ export class NavbarComponent implements OnInit {
   }[] = [
     {
       route: '',
-      text: 'Información'
+      text: 'Coding'
     },
-    {
-      route: 'descargas',
-      text: 'Descargas'
-    },
-    {
-      route: '',
-      text: 'Panel',
-      dropdown: [
-        {
-          text: 'Mis cuentas',
-          route: 'panel/mis-cuentas'
-        },
-        {
-          text: 'Ranking PVP',
-          route: 'panel/pvp-ranking'
-        }
-      ]
-    },
-    {
-      route: 'usuario',
-      text: 'Usuario'
-    },
+    // {
+    //   route: 'descargas',
+    //   text: 'Descargas'
+    // },
+    // {
+    //   route: '',
+    //   text: 'Panel',
+    //   dropdown: [
+    //     {
+    //       text: 'Mis cuentas',
+    //       route: 'panel/mis-cuentas'
+    //     },
+    //     {
+    //       text: 'Ranking PVP',
+    //       route: 'panel/pvp-ranking'
+    //     }
+    //   ]
+    // },
+    // {
+    //   route: 'usuario',
+    //   text: 'Usuario'
+    // },
   ]
   constructor(
     private router: Router,
